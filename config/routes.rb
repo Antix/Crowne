@@ -1,4 +1,6 @@
 Bomb::Application.routes.draw do
+  get "businessess/index"
+  get "businessess/new"
   get "users/index"
   get "users/new"
   # The priority is based upon order of creation: first created -> highest priority.
