@@ -32,8 +32,21 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'hirb', "~> 0.7.1"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
+
+gem 'simple_form', '~> 3.0.1'
+
+gem 'bootstrap-sass', '~> 3.1.1.0'
+
+group :development, :test do
+	gem 'rails-footnotes', '~> 3.7.9'
+	gem 'rspec-rails', '~> 2.14.1'
+	gem 'binding_of_caller'
+	gem 'meta_request'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'
