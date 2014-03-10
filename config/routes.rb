@@ -1,6 +1,6 @@
 Bomb::Application.routes.draw do
-  root to: "businesses#index"
-  
+  root to: 'businesses#index'
+
   resources :users
   resources :businesses
 
