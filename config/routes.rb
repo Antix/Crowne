@@ -1,8 +1,9 @@
 Bomb::Application.routes.draw do
-  get "businessess/index"
-  get "businessess/new"
-  get "users/index"
-  get "users/new"
+  root to: "businesses#index"
+  
+  resources :users
+  resources :businesses
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
