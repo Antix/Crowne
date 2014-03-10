@@ -1,0 +1,91 @@
+Index
+	Slider Area {
+		Top Businesses for the week
+		auto scroll
+		show category on slide
+	}
+	Pagination area {
+		time frame
+		lcoations
+		category
+		name
+		ajax loaded
+		design: {
+			either top or sidepanel configuration options
+			if top, scroll to fixed position
+		}
+	}
+
+Single View
+	Business Details {
+		gallery of images, 1 is req
+
+		Total votes
+		awards - best X fo 2013
+		average rating
+		total reviews
+
+		content description
+		hours of operation
+		"is open now"
+
+	}
+	if viewing current cat, show nearby OTHER cat winners
+		sidebar or bottom
+
+	Leave Review if logged in
+
+
+Login -> is User -> Default Homepage
+Login -> uis Admin -> Dashbaord
+
+Business Dashbaord
+	Loaded within the root domain url
+	Analytics charts {
+	 uniques, visitors, pageviews
+	}
+	average ratings
+	recent votes
+
+	show current standing within category
+		show top X businesses within same category so they can view & compare
+
+	Improvements {
+		input date range
+		items {
+			average ratings
+			total votes
+			standing change
+			visitors
+		}
+	}
+
+	If multiple businesses, show tabs along top, or some other way to specify
+
+	Each business name is Tab's name. 
+	First Business still loaded into tab.
+
+	New Tab ( + ) takes them to create business page form
+
+	On form submit -> we approve (mostly for images)
+
+
+
+On User Register
+	First
+	Last
+	email
+	location (city, st)
+	gender
+	picture
+	- or -
+	offer FB, TW, whatever oauth login
+
+On Business Register
+	Taken to dashboard app
+	First tab is already a + with form ready to fill
+
+	will be different when accept payments
+
+	On form submit -> taken to rendering of page -> if 'Yes, Done' -> payment info -> save info -> charge
+	On business #2++: form submit -> rendering -> 'Yes, DOne' -> 'you will be charged addition...' -> 'Accept/Decline'
