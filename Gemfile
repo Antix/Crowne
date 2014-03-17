@@ -32,6 +32,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'devise'
+
 gem 'hirb', "~> 0.7.1"
 
 # Use ActiveModel has_secure_password
