@@ -1,8 +1,9 @@
 Bomb::Application.routes.draw do
-  devise_for :users
   root to: 'businesses#index'
 
-  resources :users
+  devise_for :users
+  devise_for :businesses
+  
   resources :businesses
 
   # The priority is based upon order of creation: first created -> highest priority.
