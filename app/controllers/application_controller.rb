@@ -8,11 +8,13 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_params
     if params[:controller] == "user"
-      devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:first_name, :last_name, :gender, :email, :password, :password_confirmation)}
-      devise_parameter_sanitizer.for(:sign_in) {|u| u.permit(:email, :password, :remember_me)}
-    else
-      devise_parameter_sanitizer.for(:sign_up) {|b| b.permit(:email, :password, :password_confirmation)}
-      devise_parameter_sanitizer.for(:sign_in) {|b| b.permit(:email, :password, :remember_me)}
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name, :gender, :email, :password, :password_confirmation) }
+      devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:email, :password, :remember_me) }
+    elsif params[:controller] == "owner"
+      devise_parameter_sanitizer.for(:sign_up) { |o| o.permit(:email, :password, :password_confirmation) }
+      devise_parameter_sanitizer.for(:sign_in) { |o| o.permit(:email, :password, :remember_me) }
+    elsif params[:controller] == "admin"
+      devise_parameter_sanitizer.for(:sign_in) { |a| a.permit(:email, :password) }
     end
   end
 end

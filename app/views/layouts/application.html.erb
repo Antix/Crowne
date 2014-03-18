@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bomb</title>
+	<title><% yield :title %></title>
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
 </head>
@@ -12,12 +12,8 @@
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
-	<% if user_signed_in? %>
-			<p>Logged in as: <%= current_user.email %></p>
-			<%= button_to 'Logout', destroy_user_session_path, class: "btn btn-danger btn-xs", method: :delete %>
-	<% end %>
+	<%= yield :user_nav %>
 	<%= yield %>
-
 
 	<%= javascript_include_tag "application", "bootstrap", "data-turbolinks-track" => true %>
 </body>
