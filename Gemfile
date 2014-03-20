@@ -37,7 +37,7 @@ gem 'devise'
 gem 'hirb', "~> 0.7.1"
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby'
 
 gem 'simple_form', '~> 3.0.1'
 

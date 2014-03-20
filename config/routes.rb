@@ -4,6 +4,6 @@ Bomb::Application.routes.draw do
   devise_for :users, controllers: {registrations: "users/registrations"}
   devise_for :owners, controllers: {registrations: "owners/registrations"}
   
-  resources :businesses, only: [:index]
+  resources :businesses
 
 end
