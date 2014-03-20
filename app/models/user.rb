@@ -5,9 +5,11 @@ class User < ActiveRecord::Base
 	     :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
 	has_many :locations
+	has_many :votes
+	has_many :reviews
 
 	def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
-		user = User.where(:provider => auth.provider, :uid => auth.uid).first
+		user = User.where(provider: auth.provider, uid: auth.uid).first
 		if user
 			return user
 		else
