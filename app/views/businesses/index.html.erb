@@ -9,6 +9,17 @@
 	<% end %>
 <% end %>
 
+<% content_for :user_sign_up do %>
+	<% if !user_signed_in? %>
+		<%= simple_form_for resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'navbar-form' } do |f| %>
+		    <%= f.input :email, :required => false %>
+		    <%= f.input :password, :required => false %>
+		    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+		    <%= f.button :submit, "Sign in" %>
+		<% end %>
+	<% end %>
+<% end %>
+
 <div class="site-wrapper">
 
 	<div class="site-wrapper-inner">

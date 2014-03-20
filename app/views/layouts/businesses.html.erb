@@ -12,6 +12,7 @@
 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
+	<%= yield :user_nav %>
 	<%= yield %>
 
 	<%= javascript_include_tag "application", "bootstrap", "data-turbolinks-track" => true %>

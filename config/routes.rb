@@ -1,8 +1,8 @@
 Bomb::Application.routes.draw do
-  devise_for :owners
   root to: 'businesses#index'
 
-  devise_for :users
+  devise_for :users, controllers: {registrations: "users/registrations"}
+  devise_for :owners, controllers: {registrations: "owners/registrations"}
   
   resources :businesses, only: [:index]
 
