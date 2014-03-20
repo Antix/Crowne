@@ -34,6 +34,10 @@ end
 
 gem 'devise'
 
+gem 'omniauth'
+
+gem 'omniauth-facebook'
+
 gem 'hirb', "~> 0.7.1"
 
 # Use ActiveModel has_secure_password
