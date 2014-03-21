@@ -42,7 +42,7 @@ gem 'omniauth-facebook'
 gem 'fog'
 
 # photo resizing
-gem 'mini_magick'
+gem 'mini_magick', '~> 3.5.0'
 
 # file upload solution
 gem 'carrierwave'

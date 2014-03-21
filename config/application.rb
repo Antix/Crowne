@@ -19,5 +19,7 @@ module Bomb
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    ENV['PATH'] += File::PATH_SEPARATOR + 'C:\Program Files (x86)\ImageMagick-6.5.6-Q8'
   end
 end

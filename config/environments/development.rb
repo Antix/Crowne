@@ -1,6 +1,9 @@
 Bomb::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  ENV['PATH'] += File::PATH_SEPARATOR + 'C:\Program Files (x86)\ImageMagick-6.5.6-Q8'
+  ENV['S3_KEY'] = 'AKIAJGM2SPN7YAVUMRHA'
+  ENV['S3_SECRET'] = 'eLWnYVO0Zs+g6S2YjZfxrp3y4JcFE78t6AjBqDvG'
+  ENV['S3_BUCKET'] = 'crowneapp'
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

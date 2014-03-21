@@ -4,6 +4,7 @@
 
 <% content_for :user_nav do %>
 	<% if user_signed_in? %>
+		<%= image_tag(current_user.image.small_image) %>
 		<p>Logged in as: <%= current_user.email %></p>
 		<%= button_to 'Logout', destroy_user_session_path, class: "btn btn-danger btn-xs", method: :delete %>
 	<% end %>
@@ -11,7 +12,7 @@
 
 <% content_for :user_sign_up do %>
 	<% if !user_signed_in? %>
-		<%= simple_form_for resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'navbar-form' } do |f| %>
+		<%= simple_form_for resource, :as => resource_name, :url => session_path(resource_name), :html => { class: 'navbar-form', multipart: true } do |f| %>
 		    <%= f.input :email, :required => false %>
 		    <%= f.input :password, :required => false %>
 		    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
@@ -22,7 +23,7 @@
 <% end %>
 
 <div class="site-wrapper">
-
+	<%#= image_tag(@user.avatar.medium_avatar)%>
 	<div class="site-wrapper-inner">
 
 		<div id="featured" class="carousel slide" data-interval="false">

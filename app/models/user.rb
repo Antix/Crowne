@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
 	has_many :reviews
 	has_many :comments
 
+	# Image uploader using carrierwave
+	mount_uploader :image, ImageUploader
+
 	def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
 		user = User.where(provider: auth.provider, uid: auth.uid).first
 		if user
@@ -27,4 +30,6 @@ class User < ActiveRecord::Base
 			end    
 		end
 	end
+
+	
 end
