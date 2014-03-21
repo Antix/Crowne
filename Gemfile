@@ -38,6 +38,15 @@ gem 'omniauth'
 
 gem 'omniauth-facebook'
 
+# for aws cloud storage
+gem 'fog'
+
+# photo resizing
+gem 'mini_magick'
+
+# file upload solution
+gem 'carrierwave'
+
 gem 'hirb', "~> 0.7.1"
 
 # Use ActiveModel has_secure_password
