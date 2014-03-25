@@ -4,7 +4,7 @@
 
 <% content_for :user_nav do %>
 	<% if user_signed_in? %>
-		<%= image_tag(current_user.image.small_image) %>
+		<%= image_tag(current_user.image) %>
 		<p>Logged in as: <%= current_user.email %></p>
 		<%= button_to 'Logout', destroy_user_session_path, class: "btn btn-danger btn-xs", method: :delete %>
 	<% end %>
@@ -19,11 +19,12 @@
 		    <%= f.button :submit, "Sign in" %>
 		<% end %>
 		<%= link_to "Facebook", user_omniauth_authorize_path(:facebook) %>
+		<%= link_to "Google", user_omniauth_authorize_path(:google_oauth2) %>
 	<% end %>
 <% end %>
 
 <div class="site-wrapper">
-	<%#= image_tag(@user.avatar.medium_avatar)%>
+
 	<div class="site-wrapper-inner">
 
 		<div id="featured" class="carousel slide" data-interval="false">
@@ -116,6 +117,7 @@
 					    <%= f.button :submit, "Sign in" %>
 					<% end %>
 					<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+					<%= link_to "Sign in withGoogle", user_omniauth_authorize_path(:google_oauth2) %>
 				<% end %>
 			</div>
 		</div>

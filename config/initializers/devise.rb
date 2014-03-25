@@ -228,6 +228,18 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  require "omniauth-facebook"
+  config.omniauth :facebook, 
+    "1484291425126443", 
+    "43b47e45e95b189017babbf9bc30cbd5"
+
+  require "omniauth-google-oauth2"
+  config.omniauth :google_oauth2, 
+    "1022592983461.apps.googleusercontent.com", 
+    "zdxm7r8XRLf_P4YoWfCia3ze", {
+      access_type: "offline", 
+      approval_prompt: ""
+    }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
@@ -251,6 +263,5 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-  require "omniauth-facebook"
-  config.omniauth :facebook, "1484291425126443", "43b47e45e95b189017babbf9bc30cbd5"
+  
 end
