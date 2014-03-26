@@ -230,13 +230,13 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   require "omniauth-facebook"
   config.omniauth :facebook, 
-    "1484291425126443", 
-    "43b47e45e95b189017babbf9bc30cbd5"
+    ENV['FB_APP_ID'], 
+    ENV['FB_APP_SECRET']
 
   require "omniauth-google-oauth2"
   config.omniauth :google_oauth2, 
-    "1022592983461.apps.googleusercontent.com", 
-    "zdxm7r8XRLf_P4YoWfCia3ze", {
+    ENV['APP_ID'], 
+    ENV['APP_SECRET'], {
       access_type: "offline", 
       approval_prompt: ""
     }
